@@ -15,7 +15,7 @@
         // echo $number. '<br>';
         // echo $selected_choice;
 
-        $next = $number++;
+        $next = $number+1;
 
         // Get total questions
         $query = "SELECT * FROM `questions`";
@@ -43,7 +43,9 @@
             // Answer is correct
             $_SESSION['score']++;
         }
-        
+        // Debug
+        // echo $number;
+        // die();
         // Check if last question
         if($number == $total){
             header("Location: final.php");
